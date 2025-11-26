@@ -1,9 +1,9 @@
-﻿namespace DynamicMapping.Shared.Helpers;
+﻿namespace DynamicMapping.Shared.Formatting;
 
 /// <summary>
-/// Helpers to define simple mapping rules for names (e.g, string splitting or building names).
+/// Formattings to define simple mapping rules for names (e.g, string splitting or building names).
 /// </summary>
-public static class NameHelpers
+public static class NameFormatting
 {
 
     public static (string First, string Last) SplitFullName(string fullName)

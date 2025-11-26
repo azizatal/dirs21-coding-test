@@ -12,13 +12,12 @@ internal static class Startup
         var services = new ServiceCollection();
 
         // mapping infrastructure
-        services.AddSingleton<ProfileRegistry>();
-        services.AddSingleton<MapHandler>();
+        services.AddMappingEngine();
 
         // Add partner modules (each module handles its own mapping profiles)
         services.AddGoogleMappings();
 
-        // Demo class
+        // Mapping Demo services
         services.AddScoped<GoogleToModelReservationDemo>();
         services.AddScoped<GoogleToModelRoomDemo>();
         services.AddScoped<ModelToGoogleReservationDemo>();

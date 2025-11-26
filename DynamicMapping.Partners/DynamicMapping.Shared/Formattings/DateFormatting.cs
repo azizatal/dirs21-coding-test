@@ -1,4 +1,4 @@
-﻿namespace DynamicMapping.Shared.Helpers;
+﻿namespace DynamicMapping.Shared.Formatting;
 
 /// <summary>
 /// Helper methods for formatting dates.

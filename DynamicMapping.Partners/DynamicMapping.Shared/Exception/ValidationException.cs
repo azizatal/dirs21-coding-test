@@ -1,7 +1,5 @@
 ﻿namespace DynamicMapping.Shared.Excpetions;
 
-using DynamicMapping.Core.Excpetions;
-
 /// <summary>
 /// Custom exceptions thrown when a field's validation fails.
 /// Additional mapping details are provided via the <see cref="MappingException"/> base class.
@@ -32,7 +30,7 @@ public sealed class ValidationException : Exception
         string message)
     {
         return
-$@"Source : {sourceType}
+$@"Source    : {sourceType}
 Target    : {targetType}
 Message   : Validation failed. -> {message}";
     }

@@ -14,26 +14,22 @@ internal static class MappingResultPrinter
         var output = JsonSerializer.Serialize(targetData, _jsonOptions);
 
         Console.WriteLine(
-$@"══════════════════════════════════════════════════════════════════════════════
-SUCCESS
-*********************
-Source : {sourceType}
+$@"
+************************************** SUCCESS *******************************
+Source  : {sourceType}
 {input}
-*********************
-Target : {targetType}
+Target  : {targetType}
 {output}
-══════════════════════════════════════════════════════════════════════════════
+Message : Mapping from source '{sourceType}' to target '{targetType}' completed successfully.
             ");
     }
 
     public static void PrintError(Exception ex)
     {
         Console.WriteLine(
-$@"══════════════════════════════════════════════════════════════════════════════
-ERROR
-*********************
+$@"
+************************************** ERROR *******************************
 {ex.Message}
-══════════════════════════════════════════════════════════════════════════════
             ");
     }
 }

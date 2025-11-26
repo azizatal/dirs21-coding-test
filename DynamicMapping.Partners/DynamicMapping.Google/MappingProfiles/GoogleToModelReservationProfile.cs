@@ -1,6 +1,6 @@
 ﻿namespace DynamicMapping.Google.MappingProfiles;
 
-using DynamicMapping.Shared.Helpers;
+using DynamicMapping.Shared.Formatting;
 using DynamicMapping.Shared.Parsers;
 using DynamicMapping.Google.Validations;
 using DynamicMapping.Google.Models;
@@ -25,7 +25,7 @@ public class GoogleToModelReservationProfile : MappingProfileBase<GoogleReservat
         GoogleToModelReservationValidator.Validate(SourceType, TargetType, google, checkIn, checkOut);
 
         // 3. Split validated 'GuestFullName' into First and Last names
-        var (first, last) = NameHelpers.SplitFullName(google.GuestFullName);
+        var (first, last) = NameFormatting.SplitFullName(google.GuestFullName);
 
         // 4. Map 'GoogleReservation' to internal 'Reservation' model
         var reservation = new Reservation

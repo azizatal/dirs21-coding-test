@@ -27,7 +27,7 @@ public class MappingException : Exception
         string message)
     {
             return 
-$@"Source : {sourceType}
+$@"Source    : {sourceType}
 Target    : {targetType}
 Message   : Mapping failed. -> {message}";
     }

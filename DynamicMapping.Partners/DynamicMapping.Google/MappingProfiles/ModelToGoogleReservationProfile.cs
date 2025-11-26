@@ -1,6 +1,6 @@
 ﻿namespace DynamicMapping.Google.MappingProfiles;
 
-using DynamicMapping.Shared.Helpers;
+using DynamicMapping.Shared.Formatting;
 using DynamicMapping.Google.Validations;
 using DynamicMapping.Google.Models;
 using DynamicMapping.Model;
@@ -20,7 +20,7 @@ public class ModelToGoogleReservationProfile : MappingProfileBase<Reservation, G
         ModelToGoogleReservationValidator.Validate(SourceType, TargetType, model);
 
         // 2. Build 'GuestFullName' from First and Last names
-        var fullName = NameHelpers.BuildFullName(
+        var fullName = NameFormatting.BuildFullName(
             model.GuestFirstName,
             model.GuestLastName);
 
