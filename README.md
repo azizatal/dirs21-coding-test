@@ -19,11 +19,21 @@ The system supports bi-directional mappings between external partner models and 
 
 ## 📂 Project Structure
 
-DynamicMapping.Core → Core engine (MapHandler, ProfileRegistry, IMappingProfile)
-DynamicMapping.Model → Internal domain models (Reservation, Room)
-DynamicMapping.Google → Partner adapter (models, profiles, validators)
-DynamicMapping.Shared → Common utilities (parsers, helpers, exceptions)
-DynamicMapping.Host → Console demo (DI setup, sample data, output)
+DynamicMapping.Core → Core mapping engine
+(IMappingProfile, MappingProfileBase, ProfileRegistry,
+MapHandler, MappingException, DI extensions)
+
+DynamicMapping.Google → Google partner adapter
+(Google models, mapping profiles, validators, DI registration)
+
+DynamicMapping.Model → Internal domain models
+(Reservation, Room, other internal types)
+
+DynamicMapping.Shared → Shared, partner-agnostic utilities
+(parsers, formatting helpers, common exceptions)
+
+DynamicMapping.Host → .NET console host
+(DI setup, sample data, demo scenarios, result printing)
 
 ## 🧠 How It Works
 
