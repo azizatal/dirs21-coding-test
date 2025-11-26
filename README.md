@@ -8,7 +8,7 @@ The system supports bi-directional mappings between external partner models and 
 ## 🚀 Features
 
 - **Dynamic mapping engine** with runtime profile resolution  
-- **Pluggable partner adapters** (e.g., Google → Model, Model → Google)  
+- **Pluggable partner adapters** (e.g., Partner → Model, Model → Partner)  
 - **Strongly typed mapping profiles** (generic base classes + unified contract)  
 - **Centralized profile registry** and a single mapping entry point  
 - **Shared validation and formatting utilities**  
